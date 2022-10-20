@@ -6,15 +6,22 @@ import store from './store'
 // 加载全局变量样式
 import './styles/index.less'
 
-// 导入vant组件
+// 导入 vant 组件
 import Vant from 'vant'
 import 'vant/lib/index.css'
 
+// 加载动态设置 REM 基准值
+import 'amfe-flexible'
+
+// 加载 dayjs 初始化配置
+import './utils/dayjs'
+
+// 注册使用 Vant 组件库
 Vue.use(Vant)
 Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: (h) => h(App)
 }).$mount('#app')
